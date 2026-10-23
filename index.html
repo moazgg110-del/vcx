@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>MockChat Offline</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand"><span class="logo">◔</span><b>MockChat</b></div>
+    <div class="top-actions"><button id="searchBtn">⌕</button><button id="menuBtn">⋮</button></div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-view="chats">الدردشات</button>
+    <button class="tab" data-view="updates">التحديثات</button>
+    <button class="tab" data-view="communities">المجتمعات</button>
+    <button class="tab" data-view="calls">المكالمات</button>
+  </nav>
+
+  <main id="main"></main>
+
+  <button class="fab" id="fab">＋</button>
+  <div class="toast" id="toast"></div>
+</div>
+
+<template id="chatTemplate">
+<section class="chat-screen">
+ <div class="chat-head"><button class="back">‹</button><div class="avatar big">👤</div><div class="person"><b id="chatName"></b><small id="chatStatus">متصل الآن</small></div><div class="head-actions"><button>⌕</button><button>⋮</button></div></div>
+ <div class="messages" id="messages"></div>
+ <div class="composer"><button id="attach">＋</button><input id="msgInput" placeholder="اكتب رسالة"><button id="emoji">☺</button><button class="send" id="send">➤</button></div>
+</section>
+</template>
+
+<script src="script.js"></script>
+</body></html>
